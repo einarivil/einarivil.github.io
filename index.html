@@ -1,3 +1,27 @@
 <html>
-Einarin nettisivut
+    <head>
+        <style>
+            #cat {
+                max-height: 100px;
+                position: absolute;
+                transition: top 1s, left 1s;
+                top: 0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <img
+            id="cat"
+            src="cat.png"
+        />
+
+    <script>
+        setInterval(() => {
+            const cat = document.getElementById('cat');
+            cat.style.top = `${Math.random() * 100}vh`;
+            cat.style.left = `${Math.random() * 100}vw`;
+        }, 1000);
+    </script>
+    </body>
 </html>
